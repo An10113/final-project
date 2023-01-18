@@ -14,7 +14,9 @@
     max-width: 1000px;
     margin: 0 auto;
 }
-
+.white{
+    color:#fff !important;
+}
 /* 
 nav
 */
@@ -161,7 +163,6 @@ header
     margin: 0 auto;
     padding: 80px 0;
     max-width: 800px;
-    background-color: #242424;
 }
 
 .header__title{
@@ -174,22 +175,76 @@ header
 }
 .header__search-bar{
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     border-radius: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
 }
-
 .header__input{
     width: 100%;
-    height: 40px;
+    height: 60px;
     outline: none;
-    font-size: 32px;
+    font-size: 24px;
     height: 60px;
     font-size: 20px;
-    max-width: 640px;
     border: none;
-    padding-left: 20px ;
-
+    padding-left: 40px ;
+    padding-right: 100px;
 }
 
+.header__find{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    padding: 0 20px 0 8px;
+    color: #6030b1;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
 
+.section__background{
+    overflow: hidden;
+    background-image: url(https://dev.d24jig8s1lr7n9.amplifyapp.com/img/carpark.8742e246.jpeg);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+header{
+    position: relative;
+}
+.section__background::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(41,25,71,.83);;
+}
+
+/* 
+search
+*/
+
+.movie__search{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+}
+.movie__list{
+    padding: 60px 20px;
+}
 
