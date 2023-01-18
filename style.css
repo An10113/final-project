@@ -115,24 +115,29 @@ section
 .section__input{
     background-color: #fff;
     border-radius: 20px;
-    border: 1px solid #0a1f44;
+    border: 2px solid #0a1f44;
     color: #0a1f44;
     display: inline-block;
     height: 70px;
     line-height: 40px;
-    outline: none;
     padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    outline: none;
     width: 100%;
     font-size: 24px;
     padding-left: 25px;
 }
+
+.section__input:focus{
+    border-color: #6415ff;
+}
+
+
+
 .section__button{
     border: 1px solid #6030b1;
     background-color: #6030b1;
     box-shadow: 7px 7px 14px rgb(134 93 204 / 30%);
     cursor: pointer;
-
     width: 200px;
     margin-left: 20px;
     font-size: 40px;
@@ -146,6 +151,7 @@ section
     height: 50vh;
     display: flex;
 }
+
 
 
 
