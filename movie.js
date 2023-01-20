@@ -1,10 +1,13 @@
 
-
 async function main (){
-    let movie = await fetch("https://www.omdbapi.com/?apikey=a020a8a2&s=rise")
-    let moviedata = await movie.json()
-    
+    const movie = await fetch("https://www.omdbapi.com/?apikey=a020a8a2&s=rise")
+    const moviedata = await movie.json()
+    const moviedata2 = document.querySelector(".movie__wrap")
+    moviedata2.innerHTML = moviedata.Search.map(data => movieHTML(data)).join("")
+
+
 }
+main()
 
 function movieHTML(data){
     return  `<div class="movie">
@@ -18,5 +21,3 @@ function movieHTML(data){
               </div>
             </div>`
 }
-
-main()
