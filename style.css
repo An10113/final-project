@@ -164,7 +164,6 @@ header
     padding: 80px 0;
     max-width: 800px;
 }
-
 .header__title{
     text-align: center;
     font-size: 40px;
@@ -172,6 +171,7 @@ header
     color: #fff;
     font-family: 'Open Sans', sans-serif !important;
     font-weight: 400;
+    margin-bottom: 40px;
 }
 .header__search-bar{
     width: 100%;
@@ -246,5 +246,45 @@ search
 }
 .movie__list{
     padding: 60px 20px;
+}
+.movie__search--result{
+    padding: 40px 0;
+    font-size: 32px;
+}
+/* 
+movie
+*/
+.movie__wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 40px;
+    height: fit-content;
+    max-width: calc(100%/3);
+}
+.movie__img--wrapper{
+    width: 100%;
+    text-align: center;
+}
+
+.movie__img{
+    width: 100%;
+}
+
+.movie__description{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+.movie__title{
+    font-size: 36px;
+}
+.movie__year,
+.movie__ID{
+    font-size: 20px;
 }
 
