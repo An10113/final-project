@@ -254,7 +254,7 @@ search
 /* 
 movie
 */
-.movie__wrap{
+.movie__HTML{
     display: flex;
     flex-wrap: wrap;
 }
