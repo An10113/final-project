@@ -1,30 +1,25 @@
 const searchinput = document.querySelector(".movie__input")
 const moviedata2 = document.querySelector('.movie__HTML')
 
-
 async function onsearchchange(event){
-  const movie = await fetch("https://www.omdbapi.com/?apikey=a020a8a2&s=from")
+  const movie = await fetch( `https://www.omdbapi.com/?apikey=a020a8a2&s=${event.target.value.toLowerCase()}`)
   const moviedata = await movie.json()
-  let searchinput =  event.target.value.toLowerCase()
-  moviedata.Search.forEach(data => {
-    const Isvisible = data.Title.includes(searchinput) || data.imdbID.includes(searchinput)
-    
-  });
-}
+  moviedata2.innerHTML = moviedata.Search.map(data => movieHTML(data)).join("")
 
+}
 
 
 
 async function main (){
   const movie = await fetch("https://www.omdbapi.com/?apikey=a020a8a2&s=from")
   const moviedata = await movie.json()
-
   moviedata2.innerHTML = moviedata.Search.map(data => movieHTML(data)).join("")
+  
 }
 
 
-  
-  function movieHTML(data){
+
+function movieHTML(data){
     return  `<div class="movie">
               <div class="movie__img--wrapper">
                 <img src="${data.Poster}" alt="" />
